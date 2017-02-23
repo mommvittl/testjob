@@ -35,10 +35,10 @@ function viewUser(data) {
     var name = data.name;
     var email = data.email;
     var territory = data.ter_address;
-    $("#reestation").append($("<p>"+ name+"<p>")).addClass("user");
-    $("#reestation").append($("<p>"+ email+"<p>")).addClass("user");
-    $("#reestation").append($("<p>"+ territory+"<p>")).addClass("user");
-    
+    $("#reestation").append($("<p>" + name + "<p>")).addClass("user");
+    $("#reestation").append($("<p>" + email + "<p>")).addClass("user");
+    $("#reestation").append($("<p>" + territory + "<p>")).addClass("user");
+
 }
 
 function validateElement(element) {
@@ -60,8 +60,6 @@ function validateElement(element) {
     }
     return true;
 }
-
-
 
 function removeStr(element) {
     $(element).parent().nextAll('*').remove();

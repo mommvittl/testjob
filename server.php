@@ -19,10 +19,7 @@ if ($method == "GET") {
         $region->addUser($name, $email, $regionId);
     }
 }
-
-$region->returnError([$method, $email]);
-
-//$region->returnError('Некорректный запрос');
+$region->returnError('Некорректный запрос');
 
 class Region {
 
