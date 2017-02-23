@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test AJ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="ch/docsupport/style.css">
+        <link rel="stylesheet" href="ch/docsupport/prism.css">
+        <link rel="stylesheet" href="ch/chosen.css">
+        <style type="text/css" media="all">
+            /* fix rtl for demo */
+            .chosen-rtl .chosen-drop { left: -9000px; }
+        </style>
+    </head>
+    <body>
+        <div class="selRegion" id="reestation">
+            <h2>Заполните регистрационную форму</h2>
+            <form name="reestrForm" class="reestrForm" id="reestrForm">
+                <p><input  id="name" name="name" type="text" placeholder="Фамилия Имя Отчество" class="inputField widthParam" /></p>
+                <p><input  id="email"  name="email" type="text" placeholder="E-mail" class="inputField widthParam" /></p>
+                <p id="level1">
+                    <select  id="region" name="region" class="chosen-select widthParam"   tabindex="2" data-placeholder="Выберите регион..." data-level="1">
+                        <option value=""></option>
+                    </select>
+                </p>
+            </form>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+        <script src="ch/chosen.jquery.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            var config = {
+                '.chosen-select': {},
+                '.chosen-select-deselect': {allow_single_deselect: true},
+                '.chosen-select-no-single': {disable_search_threshold: 10},
+                '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
+                '.chosen-select-width': {width: "95%"}
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+            }
+        </script>
+        <script src="testaj.js"></script>
+    </body>
+</html>
